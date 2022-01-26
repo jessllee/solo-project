@@ -5,7 +5,7 @@ import App from './App.jsx';
 
 
 render(
-  <BrowserRouter>
+  <BrowserRouter basename='/'>
     <App />
   </BrowserRouter>,
   document.querySelector('#app')

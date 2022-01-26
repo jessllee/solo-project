@@ -12,7 +12,7 @@ class App extends Component {
           <Brew />
           <Dairy />
           <Else />
-          <input type='submit' value='What is My Drink?'></input>
+          <input type='submit' value='What is My Drink?' />
         </form>
       </div>
     )
