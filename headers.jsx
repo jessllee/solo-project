@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 class Brew extends Component {
@@ -37,7 +37,7 @@ class Dairy extends Component {
 
 class Else extends Component {
   render() {
-    return <div>What else?
+    return (<div>What else?
       <br></br>
       <input type='checkbox'/>
       <label>Sugar</label>
@@ -47,7 +47,7 @@ class Else extends Component {
       <label>Water</label>
       <input type='checkbox'/>
       <label>Chocolate</label>
-    </div>
+    </div>)
   }
 }
 
