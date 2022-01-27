@@ -27,11 +27,19 @@ class App extends Component {
   }
   
   handleSubmit = () => {
-    //SEND POST REQUEST??
+    fetch('/', {
+      // headers: {
+      //   'Content-Type': 'application/json',
+      // },
+      body: JSON.stringify(this.state),
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log('ERROR'))
   }
 
-  handleChange = bool => {
-    this.setState({})
+  handleChange = event => {
+    this.setState(this.state[event.target.value] = true)
   }
 
   render() {

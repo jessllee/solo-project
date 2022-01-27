@@ -9,10 +9,10 @@ class Brew extends Component {
       <fieldset>
         <legend>Pick a brew.</legend>
 
-        <input type='checkbox' name='coffee' onChange={handleChange}/>
+        <input type='checkbox' value='coffee' onChange={this.props.handleChange}/>
         <label for='coffee'>Coffee</label>
 
-        <input type='checkbox' name='espresso' onChange={handleChange}/>
+        <input type='checkbox' value='espresso' onChange={handleChange}/>
         <label for='espresso'>Espresso</label>
       </fieldset>
     )
@@ -25,25 +25,25 @@ class Dairy extends Component {
       <fieldset>
         <legend>Any dairy?</legend>
 
-        <input type='checkbox' name='steamed milk' onChange={handleChange}/>
+        <input type='checkbox' value='steamed milk' onChange={handleChange}/>
         <label for='steamed milk'>Steamed Milk</label>
 
-        <input type='checkbox' name='frothed milk' onChange={handleChange}/>
+        <input type='checkbox' value='frothed milk' onChange={handleChange}/>
         <label for='frothed milk'>Frothed Milk</label>
 
-        <input type='checkbox' name='foamed milk' onChange={handleChange}/>
+        <input type='checkbox' value='foamed milk' onChange={handleChange}/>
         <label for='foamed milk'>Foamed Milk</label>
 
-        <input type='checkbox' name='condensed milk' onChange={handleChange}/>
+        <input type='checkbox' value='condensed milk' onChange={handleChange}/>
         <label for='condensed milk'>Condensed Milk</label>
 
-        <input type='checkbox' name='cream' onChange={handleChange}/>
+        <input type='checkbox' value='cream' onChange={handleChange}/>
         <label for='cream'>Cream</label>
 
-        <input type='checkbox' name='whipped cream' onChange={handleChange}/>
+        <input type='checkbox' value='whipped cream' onChange={handleChange}/>
         <label form='whippedcream'>Whipped Cream</label>
 
-        <input type='checkbox' name='ice cream' onChange={handleChange}/>
+        <input type='checkbox' value='ice cream' onChange={handleChange}/>
         <label for= 'ice cream'>Ice Cream</label>
       </fieldset>
     )
@@ -56,16 +56,16 @@ class Else extends Component {
       <fieldset>
         <legend>What else?</legend>
 
-        <input type='checkbox' name='sugar'/>
+        <input type='checkbox' value='sugar'/>
         <label for='sugar'>Sugar</label>
 
-        <input type='checkbox' name='alcohol'/>
+        <input type='checkbox' value='alcohol'/>
         <label for='alcohol'>Alcohol</label>
 
-        <input type='checkbox' name='water'/>
+        <input type='checkbox' value='water'/>
         <label for='water'>Water</label>
 
-        <input type='checkbox' name='chocolate'/>
+        <input type='checkbox' value='chocolate'/>
         <label for='chocolate'>Chocolate</label>
       </fieldset>
     )
