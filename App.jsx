@@ -36,8 +36,7 @@ class App extends Component {
       body: JSON.stringify(this.state),
     })
     .then(res => res.json())
-    // .then(data => console.log(data))
-    .then(console.log('end of handleSubmit'))
+    .then(data => console.log(data))
     .catch(err => console.log('ERROR'))
   }
 

@@ -20,6 +20,6 @@ const coffeeSchema = new Schema ({
   water: {type: Boolean, required: true }
 })
 
-const Coffee = mongoose.model('coffee', coffeeSchema)
+const Coffee = mongoose.model('coffee', coffeeSchema, 'Coffee')
 
 module.exports = Coffee
