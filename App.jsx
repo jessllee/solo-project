@@ -1,41 +1,47 @@
-import React, { Component, useReducer, useState } from 'react';
+import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Brew, Dairy, Else } from './headers.jsx';
 
 // import './stylesheets/styles.css';
 
-const formReducer = (state, event) => {
-  return {
-    ...state,
-    [event.id]: event.value
-  }
-}
+
 
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
-  }
-  render() {
-
-    const [formData, setFormData] = useReducer(formReducer, {})
-    const [submitting, setSubmitting] = useState(false)
-
-    const handleSubmit = event => {
-      event.preventDefault()
-      setSubmitting(true)
-
-      setTimeout(() => {
-        setSubmitting(false)
-      }, 3000)
+    this.state = {
+      // coffee: false,
+      // espresso: false,
+      // steamedMilk: false,
+      // frothedMilk: false,
+      // foamedMilk: false,
+      // condensedMilk:false,
+      // cream: false,
+      // whippedCream: false,
+      // iceCream: false,
+      // sugar: false,
+      // alcohol: false,
+      // water: false,
+      // chocolate: false
     }
+  }
+  
+  handleSubmit = () => {
+    //SEND POST REQUEST??
+  }
 
+  handleChange = bool => {
+    this.setState({})
+  }
+
+  render() {
+    
     return (
       <div className='selection'>
-        <form onSubmit={handleSubmit}>
-          <Brew />
-          <Dairy />
-          <Else />
+        <form onSubmit={this.handleSubmit}>
+          <Brew handleChange={this.handleChange}/>
+          <Dairy handleChange={this.handleChange}/>
+          <Else handleChange={this.handleChange}/>
           <button type='submit'>What is My Drink?</button>
         </form>
       </div>

@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-const handleChange = event => {
-  setFormData({
-    [event.target.name]: true
-  })
-}
+
 
 class Brew extends Component {
   render() {
