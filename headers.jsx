@@ -22,9 +22,10 @@ class Brew extends Component {
 class Dairy extends Component {
   render() {
     return (
-      <fieldset id='dairy'>
+      <fieldset id='dairyAll'>
+        
         <legend className='dairy'>ANY DAIRY?</legend>
-
+        <div id='dairy1'>
         <input type='checkbox' id='steamedMilk' value='steamedMilk' onChange={this.props.handleChange}/>
         <label id='steamedMilkLabel'>STEAMED MILK</label>
 
@@ -35,8 +36,11 @@ class Dairy extends Component {
         <label id='foamedMilkLabel'>FOAMED MILK</label>
 
         <input type='checkbox' id='condensedMilk' value='condensedMilk' onChange={this.props.handleChange}/>
-        <label id='condensedMilkLabel'>CONDENSED MILK</label><br></br>
+        <label id='condensedMilkLabel'>CONDENSED MILK</label>
+        </div>
 
+
+        <div id='dairy2'>
         <input type='checkbox' id='cream' value='cream' onChange={this.props.handleChange}/>
         <label id='creamLabel'>CREAM</label>
 
@@ -45,6 +49,7 @@ class Dairy extends Component {
 
         <input type='checkbox' id='iceCream' value='iceCream' onChange={this.props.handleChange}/>
         <label id='iceCreamLabel'>ICE CREAM</label>
+        </div>
       </fieldset>
     )
   }
@@ -77,7 +82,7 @@ class Drink extends Component {
     // console.log('props', this.props)
     return (
       <div>
-        <p>{this.props.drink.name}: {this.props.drink.description}</p>
+        <ul>{this.props.drink.name}: {this.props.drink.description}</ul>
       </div>
     )
   }

@@ -68,7 +68,7 @@ class App extends Component {
           <Brew handleChange={this.handleChange}/>
           <Dairy handleChange={this.handleChange}/>
           <Else handleChange={this.handleChange}/>
-          <button type='submit' id='button'>What is My Drink?</button>
+          <button type='submit' id='button'>What's My Drink?</button>
           <div id='drinkOrder'>
             <fieldset id='orders'>
               <legend className='orders'>DRINK ORDERS</legend>

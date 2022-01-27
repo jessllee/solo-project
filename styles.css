@@ -6,6 +6,12 @@ html {
   opacity: 0.9;
 }
 
+/* body {
+  background-image: url(/assets/CoffeeHeart.jpeg);
+  background-size: 100%;
+  background-repeat: repeat;
+} */
+
 header {
   color:rgba(245, 245, 245, 0.658);
   font-family: Monda;
@@ -16,6 +22,8 @@ header {
 #brew {
   height: 65px;
   width: 825px;
+  display: grid;
+  grid-template-columns: 40px 150px 40px 150px;
 }
 
 .brew {
@@ -25,9 +33,19 @@ header {
   font-size: 15pt;
 }
 
-#dairy {
+#dairyAll {
   height: 80px;
   width: 825px;
+}
+
+#dairy1 {
+  display: grid;
+  grid-template-columns: 40px 150px 40px 150px 40px 150px 40px 150px;
+}
+
+#dairy2 {
+  display: grid;
+  grid-template-columns: 40px 150px 40px 150px 40px 150px 40px 150px;
 }
 
 .dairy {
@@ -40,6 +58,8 @@ header {
 #else {
   height: 70px;
   width: 825px;
+  display: grid;
+  grid-template-columns: 40px 150px 40px 150px;
 }
 
 .else {
@@ -49,9 +69,37 @@ header {
   font-size: 15pt;
 }
 
+#button {
+  background-image: rgba(245, 245, 245, 0.658);
+  border: 1px solid rgba(245, 245, 245, 0.658);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: rgba(66, 48, 48, 0.89);
+  cursor: pointer;
+  direction: ltr;
+  display: block;
+  font-family: Monda;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  line-height: 1.47059;
+  min-width: 30px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin: 20px;
+}
+
 #orders {
   height: 70px;
   width: 825px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .orders {
@@ -63,9 +111,15 @@ header {
 
 label {
   display: float;
-  justify-content: ;
   color: rgba(245, 245, 245, 0.733);
   font-family: Roboto Mono;
   font-weight: bold;
   font-size: 11pt;
 };
+
+p {
+  color: rgba(245, 245, 245, 0.733);
+  font-family: Roboto Mono;
+  font-weight: bold;
+  font-size: 11pt;
+}
