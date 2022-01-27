@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 class Brew extends Component {
   render() {
     return (
-      <fieldset>
+      <fieldset id='brew'>
         <legend>Pick a brew.</legend>
 
         <input type='checkbox' id='coffee' value='coffee' onChange={this.props.handleChange}/>
@@ -22,7 +22,7 @@ class Brew extends Component {
 class Dairy extends Component {
   render() {
     return (
-      <fieldset>
+      <fieldset id='dairy'>
         <legend>Any dairy?</legend>
 
         <input type='checkbox' id='steamedMilk' value='steamedMilk' onChange={this.props.handleChange}/>
@@ -53,7 +53,7 @@ class Dairy extends Component {
 class Else extends Component {
   render() {
     return (
-      <fieldset>
+      <fieldset id='else'>
         <legend>What else?</legend>
 
         <input type='checkbox' id='sugar' value='sugar' onChange={this.props.handleChange}/>

@@ -46,14 +46,14 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state) //-> state does get populated onChange
+    // console.log('state', this.state) //-> state does get populated onChange
     return (
       <div className='selection'>
         <form onSubmit={this.handleSubmit}>
           <Brew handleChange={this.handleChange}/>
           <Dairy handleChange={this.handleChange}/>
           <Else handleChange={this.handleChange}/>
-          <button type='submit'>What is My Drink?</button>
+          <button type='submit' id='button'>What is My Drink?</button>
         </form>
       </div>
     )

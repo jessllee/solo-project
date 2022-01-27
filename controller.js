@@ -3,6 +3,8 @@ const Coffee = require('./model.js')
 
 const CoffeeController = {
   getCoffee(req, res, next) {
+    console.log('hello from controller')
+    console.log('req', req.body)
     Coffee.find({...req.body},
       (err, data) => {
         if (err) return next(err)
@@ -15,4 +17,4 @@ const CoffeeController = {
   }
 }
 
-module.exports = controller;
+module.exports = CoffeeController;

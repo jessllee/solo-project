@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-const controller = require('./controller.js')
+const coffeeController = require('./controller.js')
 
 const PORT = 3000;
 
@@ -29,19 +29,23 @@ coffeeDB.once('open', () => {
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+const coffeeRouter = express.Router()
+app.use('/', coffeeRouter)
+
 // route handler for main app
-app.use('/',
+coffeeRouter.use('/',
   (req, res) => {
     console.log('Hi there')
     return res.status(200).sendFile(path.resolve(__dirname, 'index.html'))
   }
 );
 
-app.get('/',
-  controller.getCoffee,
+coffeeRouter.get('/',
+  // console.log('hello from fetch'),
+  coffeeController.getCoffee,
   (req, res) => {
-    if (!res.locals.drinks) return res.json({error: 'Choose another combination.'})
-    return res.status(200).json({drinks: res.locals.drinks})
+    if (!res.locals.coffee) return res.json({error: 'Choose another drink combination.'})
+    return res.status(200).json({drinks: res.locals.coffee})
   }
 )
 
