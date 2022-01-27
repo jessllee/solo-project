@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+html {
+  background-color: rgba(66, 48, 48, 0.89);
+  opacity: 0.9;
+}
+
+header {
+  color:rgba(245, 245, 245, 0.658);
+  font-family: Monda;
+  font-weight: bold;
+  font-size: 90;
+}
+
+#brew {
+  height: 65px;
+  width: 825px;
+}
+
+.brew {
+  color: rgba(245, 245, 245, 0.658);
+  font-family: Monda;
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+#dairy {
+  height: 80px;
+  width: 825px;
+}
+
+.dairy {
+  color: rgba(245, 245, 245, 0.658);
+  font-family: Monda;
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+#else {
+  height: 70px;
+  width: 825px;
+}
+
+.else {
+  color: rgba(245, 245, 245, 0.658);
+  font-family: Monda;
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+#orders {
+  height: 70px;
+  width: 825px;
+}
+
+.orders {
+  color: rgba(245, 245, 245, 0.658);
+  font-family: Monda;
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+label {
+  display: float;
+  justify-content: ;
+  color: rgba(245, 245, 245, 0.733);
+  font-family: Roboto Mono;
+  font-weight: bold;
+  font-size: 11pt;
+};

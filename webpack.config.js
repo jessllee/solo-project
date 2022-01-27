@@ -20,10 +20,10 @@ module.exports = {
           }
         }
       },
-      // {//BABEL CONFIG FOR CSS FILES
-      //   test: /\.css$/i,
-      //   use: ['style-loader', 'css-loader'],
-      // },
+      {//BABEL CONFIG FOR CSS FILES
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
       // {//BABEL CONFIG FOR IMAGES
       //   test: /\.(png|jp(e*)g|svg|gif)$/,
       //   use: ['file-loader'],

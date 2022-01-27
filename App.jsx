@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Brew, Dairy, Else, Drink } from './headers.jsx';
 
-// import './stylesheets/styles.css';
+import './styles.css';
 
 
 
@@ -70,8 +70,8 @@ class App extends Component {
           <Else handleChange={this.handleChange}/>
           <button type='submit' id='button'>What is My Drink?</button>
           <div id='drinkOrder'>
-            <fieldset>
-              <legend>Drink Orders</legend>
+            <fieldset id='orders'>
+              <legend className='orders'>DRINK ORDERS</legend>
               {this.state.arr}
             </fieldset>
           </div>
