@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Brew, Dairy, Else } from './headers.jsx';
+import { Brew, Dairy, Else, Drink } from './headers.jsx';
 
 // import './stylesheets/styles.css';
 
@@ -39,12 +39,25 @@ class App extends Component {
       body: JSON.stringify({...this.state})
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+      // console.log('data', data.drinks[0])
+      const arr = []
+      for (let i = 0; i < data.drinks.length; i++) {
+        arr.push(<Drink key={data.drinks[i]._id} drink={data.drinks[i]} />)
+      }
+      // console.log('arr', arr)
+      this.setState({arr:[...arr]})
+      console.log('state', this.state)
+      return arr
+    })
     .catch(err => console.log(err))
   }
 
   handleChange = event => {
-    this.setState({ ...this.state, [event.target.value]: true })
+    if (event.target.checked) this.setState({ ...this.state, [event.target.value]: true })
+    else {
+      this.setState({...this.state, [event.target.value]:false})
+    }
   }
 
   render() {
@@ -56,6 +69,12 @@ class App extends Component {
           <Dairy handleChange={this.handleChange}/>
           <Else handleChange={this.handleChange}/>
           <button type='submit' id='button'>What is My Drink?</button>
+          <div id='drinkOrder'>
+            <fieldset>
+              <legend>Drink Orders</legend>
+              {this.state.arr}
+            </fieldset>
+          </div>
         </form>
       </div>
     )

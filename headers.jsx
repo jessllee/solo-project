@@ -72,4 +72,15 @@ class Else extends Component {
   }
 }
 
-export { Brew, Dairy, Else };
+class Drink extends Component {
+  render() {
+    // console.log('props', this.props)
+    return (
+      <div>
+        <p>{this.props.drink.name}: {this.props.drink.description}</p>
+      </div>
+    )
+  }
+}
+
+export { Brew, Dairy, Else, Drink };
