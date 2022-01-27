@@ -16,28 +16,34 @@ mongoose.connect(mongo_uri, {
   useUnifiedTopology: true,
   dbName: 'coffeeDB'
 })
-  .then(() => console.log('database connected'))
-  .catch(() => console.log('error occured while connecting to database'));
+  // .then(() => console.log('database connected'))
+  // .catch(() => console.log('error occured while connecting to database'));
+
+const coffeeDB = mongoose.connection
+coffeeDB.on('error', console.error.bind(console, 'connection error: '))
+coffeeDB.once('open', () => {
+  console.log('Connected Successfully')
+})
 
 // parse req.body
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // route handler for main app
-app.get('/',
+app.use('/',
   (req, res) => {
     console.log('Hi there')
     return res.status(200).sendFile(path.resolve(__dirname, 'index.html'))
   }
 );
 
-// app.get('/',
-//   controller.getDrinks,
-//   (req, res) => {
-//     console.log('Drink Order?')
-//     return res.status(200)
-//   }
-// )
+app.get('/',
+  controller.getCoffee,
+  (req, res) => {
+    if (!res.locals.drinks) return res.json({error: 'Choose another combination.'})
+    return res.status(200).json({drinks: res.locals.drinks})
+  }
+)
 
 // catch-all
 app.use((req, res) => res.sendStatus(404));

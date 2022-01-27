@@ -1,8 +1,18 @@
-const controller = {}
+const Coffee = require('./model.js')
 
-controller.getDrinks = (req, res, next) => {
-  console.log('body', req.body)
-  return next()
+
+const CoffeeController = {
+  getCoffee(req, res, next) {
+    Coffee.find({...req.body},
+      (err, data) => {
+        if (err) return next(err)
+        else {
+          res.locals.coffee = [...data]
+          return next()
+        }
+      }
+    )
+  }
 }
 
 module.exports = controller;

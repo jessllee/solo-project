@@ -36,7 +36,8 @@ class App extends Component {
       body: JSON.stringify(this.state),
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    // .then(data => console.log(data))
+    .then(console.log('end of handleSubmit'))
     .catch(err => console.log('ERROR'))
   }
 
@@ -45,7 +46,7 @@ class App extends Component {
   }
 
   render() {
-    
+    console.log(this.state) //-> state does get populated onChange
     return (
       <div className='selection'>
         <form onSubmit={this.handleSubmit}>
