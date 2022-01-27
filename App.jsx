@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { Brew, Dairy, Else, Drink } from './headers.jsx';
+import { Brew, Dairy, Else, Drink, Music } from './headers.jsx';
 
 // import './stylesheets/styles.css';
 
@@ -23,6 +23,7 @@ class App extends Component {
       // alcohol: false,
       // water: false,
       // chocolate: false
+      url: 'https://www.youtube.com/watch?v=IssuWWx3oq4&list=PLUAsF5s_xnHv-kWX4bg5IILSoSWBEeI_H&index=5'
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -47,7 +48,7 @@ class App extends Component {
       }
       // console.log('arr', arr)
       this.setState({arr:[...arr]})
-      console.log('state', this.state)
+      // console.log('state', this.state)
       return arr
     })
     .catch(err => console.log(err))
@@ -64,6 +65,7 @@ class App extends Component {
     // console.log('state', this.state) //-> state does get populated onChange
     return (
       <div className='selection'>
+        <Music id='lofi' url={this.state.url} />
         <form onSubmit={this.handleSubmit}>
           <Brew handleChange={this.handleChange}/>
           <Dairy handleChange={this.handleChange}/>
