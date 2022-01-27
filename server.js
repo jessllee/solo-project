@@ -30,7 +30,22 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 const coffeeRouter = express.Router()
-app.use('/', coffeeRouter)
+app.use('/api', coffeeRouter)
+
+
+
+coffeeRouter.post('/',
+  // console.log('hello from fetch'),
+  coffeeController.getCoffee,
+  (req, res) => {
+    // console.log('for the love of god...')
+    if (!res.locals.coffee) return res.json({error: 'Choose another drink combination.'})
+    return res.status(200).json({drinks: res.locals.coffee})
+  }
+)
+
+
+
 
 // route handler for main app
 coffeeRouter.use('/',
@@ -40,14 +55,8 @@ coffeeRouter.use('/',
   }
 );
 
-coffeeRouter.get('/',
-  // console.log('hello from fetch'),
-  coffeeController.getCoffee,
-  (req, res) => {
-    if (!res.locals.coffee) return res.json({error: 'Choose another drink combination.'})
-    return res.status(200).json({drinks: res.locals.coffee})
-  }
-)
+
+
 
 // catch-all
 app.use((req, res) => res.sendStatus(404));

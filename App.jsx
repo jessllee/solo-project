@@ -29,15 +29,18 @@ class App extends Component {
   
   handleSubmit = event => {
     event.preventDefault()
-    fetch('/', {
-      // headers: {
-      //   'Content-Type': 'application/json',
-      // },
-      body: JSON.stringify(this.state),
+    console.log('in handleSubmit')
+    console.log('state', this.state)
+    fetch('/api', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({...this.state})
     })
     .then(res => res.json())
     .then(data => console.log(data))
-    .catch(err => console.log('ERROR'))
+    .catch(err => console.log(err))
   }
 
   handleChange = event => {

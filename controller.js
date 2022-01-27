@@ -7,6 +7,7 @@ const CoffeeController = {
     console.log('req', req.body)
     Coffee.find({...req.body},
       (err, data) => {
+        console.log('data', data)
         if (err) return next(err)
         else {
           res.locals.coffee = [...data]
