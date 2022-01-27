@@ -39,4 +39,13 @@ module.exports = {
       template: path.resolve(__dirname, 'index.html'),
     }),
   ],
+  devServer: {
+    static: {
+      publicPath: '/build',
+      directory: path.resolve(__dirname, 'build')
+    },
+    proxy: {
+      '/': 'http://localhost:3000'
+    }
+  }
 }
