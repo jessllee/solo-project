@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+const controller = require('./controller.js')
+
 const PORT = 3000;
 
 const mongo_uri = `mongodb+srv://jessllee:codesmithmongo@cluster0.dbgka.mongodb.net/coffeeDB?retryWrites=true&w=majority`;
@@ -17,6 +19,10 @@ mongoose.connect(mongo_uri, {
   .then(() => console.log('database connected'))
   .catch(() => console.log('error occured while connecting to database'));
 
+// parse req.body
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 // route handler for main app
 app.get('/',
   (req, res) => {
@@ -24,6 +30,14 @@ app.get('/',
     return res.status(200).sendFile(path.resolve(__dirname, 'index.html'))
   }
 );
+
+// app.get('/',
+//   controller.getDrinks,
+//   (req, res) => {
+//     console.log('Drink Order?')
+//     return res.status(200)
+//   }
+// )
 
 // catch-all
 app.use((req, res) => res.sendStatus(404));

@@ -24,9 +24,11 @@ class App extends Component {
       // water: false,
       // chocolate: false
     }
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
   
-  handleSubmit = () => {
+  handleSubmit = event => {
+    event.preventDefault()
     fetch('/', {
       // headers: {
       //   'Content-Type': 'application/json',
@@ -39,7 +41,7 @@ class App extends Component {
   }
 
   handleChange = event => {
-    this.setState(this.state[event.target.value] = true)
+    this.setState({ ...this.state, [event.target.value]: true })
   }
 
   render() {
