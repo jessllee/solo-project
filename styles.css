@@ -3,7 +3,7 @@
 
 html {
   /* background: linear-gradient(rgba(36, 24, 24, 0.534), rgba(36, 24, 24, 0.884), rgb(36, 24, 24)); */
-  background: linear-gradient(rgba(78, 65, 65, 0.103), rgba(27, 14, 14, 0.767), rgba(27, 14, 14, 0.877), rgb(27, 14, 14));
+  background: linear-gradient(rgba(14, 7, 7, 0.274), rgba(14, 7, 7, 0.705), rgba(14, 7, 7, 0.849), rgba(14, 7, 7, 0.904), rgba(8, 4, 4, 0.966), rgb(15, 6, 6));
   opacity: 0.9;
   display: flex;
   justify-content: center;
@@ -95,7 +95,7 @@ header {
 }
 
 #orders {
-  height: 500px;
+  height: 600px;
   width: 1000px;
   
 
