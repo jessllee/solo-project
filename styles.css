@@ -2,18 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
 html {
-  background-color: rgba(36, 24, 24, 0.986);
+  /* background: linear-gradient(rgba(36, 24, 24, 0.534), rgba(36, 24, 24, 0.884), rgb(36, 24, 24)); */
+  background: linear-gradient(rgba(78, 65, 65, 0.103), rgba(27, 14, 14, 0.767), rgba(27, 14, 14, 0.877), rgb(27, 14, 14));
   opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-content: center
 }
 
-/* body {
-  background-image: url(/assets/CoffeeHeart.jpeg);
-  background-size: 100%;
-  background-repeat: repeat;
-} */
-
 header {
-  color:rgba(245, 245, 245, 0.658);
+  /* color:rgba(245, 245, 245, 0.658); */
+  color: rgba(27, 14, 14, 0.466);
   font-family: Monda;
   font-weight: bold;
   font-size: 90;
@@ -27,7 +26,8 @@ header {
 }
 
 .brew {
-  color: rgba(245, 245, 245, 0.658);
+  /* color: rgba(245, 245, 245, 0.658); */
+  color: rgba(27, 14, 14, 0.466);
   font-family: Monda;
   font-weight: bold;
   font-size: 15pt;
@@ -95,7 +95,7 @@ header {
 }
 
 #orders {
-  /* height: 700px; */
+  height: 500px;
   width: 1000px;
   
 
