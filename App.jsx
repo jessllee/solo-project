@@ -41,7 +41,7 @@ class App extends Component {
     .then(res => res.json())
     .then(data => {
       // console.log('data', data.drinks[0])
-      if (!data.length) alert ('Sorry, can\'t find your drink. Try again!')
+      if (!data.length) alert ('Sorry, can\'t find your drink combination. Try again!')
       const arr = []
       for (let i = 0; i < data.drinks.length; i++) {
         arr.push(<Drink key={data.drinks[i]._id} drink={data.drinks[i]} />)
