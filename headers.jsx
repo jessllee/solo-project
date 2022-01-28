@@ -81,7 +81,13 @@ class Drink extends Component {
   render() {
     // console.log('props', this.props)
     return (
-      <ul>{this.props.drink.name}: {this.props.drink.description}</ul>
+      <div className='allOrders'>
+          <img src={this.props.drink.imgUrl}/>
+          <ul>{this.props.drink.name}: {this.props.drink.description}</ul>
+          <br></br>
+          <br></br>
+          <br></br>
+      </div>  
     )
   }
 }

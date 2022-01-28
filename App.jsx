@@ -41,13 +41,14 @@ class App extends Component {
     .then(res => res.json())
     .then(data => {
       // console.log('data', data.drinks[0])
+      if (!data.length) alert ('Sorry, can\'t find your drink. Try again!')
       const arr = []
       for (let i = 0; i < data.drinks.length; i++) {
         arr.push(<Drink key={data.drinks[i]._id} drink={data.drinks[i]} />)
       }
       // console.log('arr', arr)
       this.setState({arr:[...arr]})
-      console.log('state', this.state)
+      // console.log('state', this.state)
       return arr
     })
     .catch(err => console.log(err))
@@ -65,10 +66,13 @@ class App extends Component {
     return (
       <div className='selection'>
         <form onSubmit={this.handleSubmit}>
+
           <Brew handleChange={this.handleChange}/>
           <Dairy handleChange={this.handleChange}/>
           <Else handleChange={this.handleChange}/>
+
           <button type='submit' id='button'>What's My Drink?</button>
+
           <div id='drinkOrder'>
             <fieldset id='orders'>
               <legend className='orders'>DRINK ORDERS</legend>

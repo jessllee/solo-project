@@ -21,7 +21,7 @@ header {
 
 #brew {
   height: 65px;
-  width: 825px;
+  width: 1000px;
   display: grid;
   grid-template-columns: 40px 150px 40px 150px;
 }
@@ -35,7 +35,7 @@ header {
 
 #dairyAll {
   height: 80px;
-  width: 825px;
+  width: 1000px;
 }
 
 #dairy1 {
@@ -57,7 +57,7 @@ header {
 
 #else {
   height: 70px;
-  width: 825px;
+  width: 1000px;
   display: grid;
   grid-template-columns: 40px 150px 40px 150px;
 }
@@ -96,7 +96,7 @@ header {
 
 #orders {
   /* height: 700px; */
-  width: 825px;
+  width: 1000px;
   
 
 }
@@ -128,3 +128,13 @@ label {
   font-size: 11pt;
 };
 
+.allOrders {
+  float: left;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+ul {
+  overflow-wrap: break-word;
+}
