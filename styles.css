@@ -95,11 +95,22 @@ header {
 }
 
 #orders {
-  height: 70px;
+  /* height: 700px; */
   width: 825px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
+
+}
+
+.drinkOrder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: rgba(245, 245, 245, 0.733);
+  font-family: Roboto Mono;
+  font-weight: bold;
+  font-size: 11pt;
+  min-height: 100px;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .orders {
@@ -117,9 +128,3 @@ label {
   font-size: 11pt;
 };
 
-p {
-  color: rgba(245, 245, 245, 0.733);
-  font-family: Roboto Mono;
-  font-weight: bold;
-  font-size: 11pt;
-}

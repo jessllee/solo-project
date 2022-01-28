@@ -72,7 +72,9 @@ class App extends Component {
           <div id='drinkOrder'>
             <fieldset id='orders'>
               <legend className='orders'>DRINK ORDERS</legend>
-              {this.state.arr}
+                <div className='drinkOrder'>
+                  {this.state.arr}
+                </div>
             </fieldset>
           </div>
         </form>
