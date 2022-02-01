@@ -9,7 +9,7 @@ const coffeeController = require('./controller.js')
 
 const PORT = 3000;
 
-const mongo_uri = `mongodb+srv://jessllee:codesmithmongo@cluster0.dbgka.mongodb.net/coffeeDB?retryWrites=true&w=majority`;
+const mongo_uri = `mongodb+srv://USERNAME:PASSWORD@cluster0.dbgka.mongodb.net/DBNAME?retryWrites=true&w=majority`;
 
 mongoose.connect(mongo_uri, {
   useNewUrlParser: true,
